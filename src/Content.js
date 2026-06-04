@@ -3,22 +3,18 @@ import { setupDsSitecoreDeveloperError } from './ContentScripts/DS/SitecoreDevel
 import { setupGithubCreateBranch } from './ContentScripts/Github/GitHubCreateBranch';
 import { setupGithubHideItemFiles } from './ContentScripts/Github/HideItemFiles';
 import { setupSitecoreLayoutImprovements } from './SitecoreLayoutImprovements';
-import { showCreateBranchLink } from './ContentScripts/Jira/ShowCreateBranchLink';
 import { setupLayoutGrid } from './ContentScripts/DS/LayoutGrid';
 import { setupDsFastLogin } from "./ContentScripts/DS/FastLogIn";
-import { setupKlFastLogin } from './ContentScripts/Klasselotteriet/FastLogIn';
 import { setupCprGenerator } from './ContentScripts/MitIdSimulator/CprGenerator';
 import { setupNemLogIn } from './ContentScripts/MitIdSimulator/NemLogIn';
 import { setupFillNewAccountForm } from './ContentScripts/DS/FillNewAccountForm';
 import { setupFillCprPrompt } from './ContentScripts/DS/FillCprPrompt';
 
 setupDsFastLogin();
-setupKlFastLogin();
 setupDsFindDictionary();
 void setupGithubCreateBranch();
 setupGithubHideItemFiles();
 setupSitecoreLayoutImprovements();
-showCreateBranchLink();
 setupDsSitecoreDeveloperError();
 void setupLayoutGrid();
 setupCprGenerator();

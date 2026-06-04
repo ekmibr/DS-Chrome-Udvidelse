@@ -13,24 +13,6 @@ const toggleLabel = (cta, showFastLogin) => {
   span.innerText = showFastLogin ? 'til' : 'fra';
 };
 
-export const setupKlFastLogin = () => {
-  chrome.storage.sync.get('fastLogin', ({ fastLogin }) => {
-    document.body.classList.toggle('chrome-plugin-fast-login', fastLogin);
-
-    if (fastLogin && location.pathname === '/login') {
-      const int = setInterval(() => {
-        const cta = document.querySelector('.login__footer a.link-blue');
-
-        if (cta) {
-          clearInterval(int);
-          cta.click();
-        }
-
-      }, 100);
-    }
-  });
-};
-
 export const toggleKlFastLogin = () => {
   const fastLoginButton = document.querySelector('#fastLogin');
   void handleEnableCta(fastLoginButton);

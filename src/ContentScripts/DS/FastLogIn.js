@@ -1,22 +1,5 @@
 import { getCurrentTab } from '../../ChromeTools';
 
-// const applyStyles = () => {
-//   let style = document.getElementById('fast-login-style');
-//
-//   if (!style) {
-//     style = document.createElement('style');
-//     style.id = 'fast-login-style';
-//     document.body.appendChild(style);
-//
-//     style.innerHTML = `
-//       body.chrome-plugin-fast-login [aria-label="Log ind"] {
-//         background-color: #ffcc00 !important;
-//         color: #000 !important;
-//       }
-//     `;
-//   }
-// };
-
 const handleEnableCta = async (cta) => {
   const tab = await getCurrentTab();
 
@@ -109,8 +92,6 @@ export const setupDsFastLogin = () => {
       document.querySelector('a.js-login-custom-events-to-username-password')?.click();
     }
   });
-
-  // applyStyles();
 };
 
 export const toggleDsFastLogin = () => {
